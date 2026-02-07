@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VAARAHI EVENTS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#F7F7F4;
+  color:#2F2F2F;
+}
+
+/* HEADER */
+header{
+  background:#1E5F4C;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.header{
+  max-width:1200px;
+  margin:auto;
+  padding:15px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-family:'Playfair Display',serif;
+  font-size:1.8rem;
+  color:#C9A24D;
+}
+
+/* NAV */
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:25px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#F7F7F4;
+  font-weight:500;
+}
+
+nav a:hover{
+  color:#C9A24D;
+}
+
+.hamburger{
+  display:none;
+  font-size:2rem;
+  color:#F7F7F4;
+  cursor:pointer;
+}
+
+/* HERO */
+.hero{
+  padding:90px 20px;
+  text-align:center;
+}
+
+.hero h1{
+  font-family:'Playfair Display',serif;
+  color:#1E5F4C;
+  font-size:2.6rem;
+}
+
+.hero p{
+  margin:15px 0;
+  font-size:1.1rem;
+}
+
+.btn{
+  display:inline-block;
+  padding:12px 28px;
+  background:#1E5F4C;
+  color:#F7F7F4;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.btn:hover{
+  background:#C9A24D;
+  color:#1E5F4C;
+}
+
+/* SECTIONS */
+section{
+  padding:70px 20px;
+}
+
+h2{
+  text-align:center;
+  font-family:'Playfair Display',serif;
+  color:#1E5F4C;
+  margin-bottom:40px;
+  font-size:2.1rem;
+}
+
+/* SERVICES */
+.services{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:22px;
+}
+
+.service{
+  background:#ffffff;
+  padding:28px;
+  border-radius:14px;
+  text-align:center;
+  border-top:4px solid #C9A24D;
+  box-shadow:0 10px 25px rgba(0,0,0,0.07);
+}
+
+.service h3{
+  color:#1E5F4C;
+  margin-bottom:10px;
+  font-family:'Playfair Display',serif;
+}
+
+/* GALLERY */
+.gallery{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:18px;
+}
+
+.gallery img{
+  width:100%;
+  border-radius:14px;
+  border:3px solid #C9A24D;
+}
+
+/* CONTACT */
+.contact{
+  text-align:center;
+}
+
+.contact p{
+  margin-bottom:20px;
+  font-weight:500;
+}
+
+form{
+  max-width:480px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+input,textarea{
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+
+button{
+  border:none;
+  cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+  background:#1E5F4C;
+  color:#F7F7F4;
+  text-align:center;
+  padding:18px;
+  font-size:0.9rem;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  nav ul{
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    right:20px;
+    top:70px;
+    background:#1E5F4C;
+    width:220px;
+    padding:15px;
+    border-radius:12px;
+  }
+
+  nav ul.show{
+    display:flex;
+  }
+
+  .hamburger{
+    display:block;
+  }
+
+  .hero h1{
+    font-size:2rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header">
+    <div class="logo">VAARAHI EVENTS</div>
+    <nav>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <ul id="menu">
+        <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+        <li><a href="#services" onclick="toggleMenu()">Services</a></li>
+        <li><a href="#gallery" onclick="toggleMenu()">Gallery</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <h1>Elegant & Traditional Event Decorations</h1>
+  <p>Weddings • House Entrance • Birthdays • Corporate Events</p>
+  <a href="#contact" class="btn">Get Quote</a>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="service">
+      <h3>Marriage Mandap & Stage</h3>
+      <p>Traditional décor with coconut leaves & flowers.</p>
+    </div>
+    <div class="service">
+      <h3>House Entrance Decoration</h3>
+      <p>Complete traditional entrance decoration.</p>
+    </div>
+    <div class="service">
+      <h3>Birthday Decoration</h3>
+      <p>Simple to premium birthday setups.</p>
+    </div>
+    <div class="service">
+      <h3>Corporate & Public Events</h3>
+      <p>Professional event decoration services.</p>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <img src="https://via.placeholder.com/400x300">
+    <img src="https://via.placeholder.com/400x300">
+    <img src="https://via.placeholder.com/400x300">
+    <img src="https://via.placeholder.com/400x300">
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <p>📞 +91 99022 93293 | 📍 Challakere</p>
+
+  <form>
+    <input type="text" placeholder="Name" required>
+    <input type="email" placeholder="Email" required>
+    <textarea rows="4" placeholder="Message" required></textarea>
+    <button class="btn">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 VAARAHI EVENTS. All Rights Reserved.
+</footer>
+
+<script>
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
